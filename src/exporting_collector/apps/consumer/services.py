@@ -2,7 +2,7 @@ import json
 
 from kafka import KafkaConsumer
 
-from src.config.settings import settings
+from exporting_collector.config.config import settings
 
 
 def start_consumer_services(
