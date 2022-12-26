@@ -17,7 +17,7 @@ class TestSyslogTCPHandler(socketserver.BaseRequestHandler):
             self.initialize()
 
         incoming_events = bytes.decode(self.request.recv(1024).strip())
-        if incoming_events is not None:
+        if incoming_events:
             try:
                 logger.info(f"Received data: {incoming_events}")
             except Exception as e:
